@@ -35,8 +35,8 @@ bash fetch_and_preprocess.sh
 cd scripts/kim/
 bash train.sh
 ```
+The result is in `scripts/kim/log.txt` file.
 3. Analysis the result for dev/test set (optional)
 ```
 bash test.sh
 ```
-The result is in `scripts/kim/log.txt` file.
