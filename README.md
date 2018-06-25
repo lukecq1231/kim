@@ -30,10 +30,13 @@ cd data
 bash fetch_and_preprocess.sh
 ```
 
-2. Train and test model for ESIM
+2. Train and test model
 ```
 cd scripts/kim/
 bash train.sh
 ```
-
+3. Analysis the result for dev/test set (optional)
+```
+bash test.sh
+```
 The result is in `scripts/kim/log.txt` file.
