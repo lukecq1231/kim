@@ -1,5 +1,5 @@
 '''
-Build a Enhancing LSTM model for Natural Language Inference
+Build a Neural Natural Language Inference Models Enhanced with External Knowledge
 '''
 import theano
 import theano.tensor as tensor
