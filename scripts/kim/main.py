@@ -206,19 +206,25 @@ def prepare_data(seqs_x, seqs_y, seqs_x_lemma, seqs_y_lemma, labels, options, kb
         new_seqs_y = []
         new_lengths_x = []
         new_lengths_y = []
-        for l_x, s_x, l_y, s_y in zip(lengths_x, seqs_x, lengths_y, seqs_y):
+        new_seqs_lemma_x = []
+        new_seqs_lemma_y = []
+        for l_x, s_x, s_x_l, l_y, s_y, s_y_l in zip(lengths_x, seqs_x, seqs_x_lemma, lengths_y, seqs_y, seqs_y_lemma):
             if l_x < maxlen and l_y < maxlen:
                 new_seqs_x.append(s_x)
                 new_lengths_x.append(l_x)
+                new_seqs_lemma_x.append(s_x_l)
                 new_seqs_y.append(s_y)
                 new_lengths_y.append(l_y)
+                new_seqs_lemma_y.append(s_y_l)
         lengths_x = new_lengths_x
         seqs_x = new_seqs_x
         lengths_y = new_lengths_y
         seqs_y = new_seqs_y
+        seqs_x_lemma = new_seqs_lemma_x
+        seqs_y_lemma = new_seqs_lemma_y
 
         if len(lengths_x) < 1 or len(lengths_y) < 1:
-            return None, None, None, None, None, None, None
+            return None, None, None, None, None, None, None, None
 
     n_samples = len(seqs_x)
     maxlen_x = numpy.max(lengths_x)
