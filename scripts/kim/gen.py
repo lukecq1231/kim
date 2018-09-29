@@ -13,13 +13,13 @@ from main import (build_model, pred_probs, prepare_data, pred_acc, load_params, 
 def main():
     model_name = os.path.basename(os.path.dirname(os.path.realpath(__file__)))
     model = '../../models/{}.npz'.format(model_name)
-    valid_datasets   = ['../../data/sequence_and_features/premise_snli_1.0_dev.txt', 
-                        '../../data/sequence_and_features/hypothesis_snli_1.0_dev.txt',
+    valid_datasets   = ['../../data/sequence_and_features/premise_snli_1.0_dev_token.txt', 
+                        '../../data/sequence_and_features/hypothesis_snli_1.0_dev_token.txt',
                         '../../data/sequence_and_features/premise_snli_1.0_dev_lemma.txt', 
                         '../../data/sequence_and_features/hypothesis_snli_1.0_dev_lemma.txt',
                         '../../data/sequence_and_features/label_snli_1.0_dev.txt']
-    test_datasets    = ['../../data/sequence_and_features/premise_snli_1.0_test.txt', 
-                        '../../data/sequence_and_features/hypothesis_snli_1.0_test.txt',
+    test_datasets    = ['../../data/sequence_and_features/premise_snli_1.0_test_token.txt', 
+                        '../../data/sequence_and_features/hypothesis_snli_1.0_test_token.txt',
                         '../../data/sequence_and_features/premise_snli_1.0_test_lemma.txt', 
                         '../../data/sequence_and_features/hypothesis_snli_1.0_test_lemma.txt',
                         '../../data/sequence_and_features/label_snli_1.0_test.txt']
